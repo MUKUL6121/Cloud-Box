@@ -6,7 +6,7 @@ function Files() {
     const [data, setdata] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5500/files")
+        axios.get("https://cloud-box-server.onrender.com/files")
             .then((res) => {
                 setdata(res.data);
                 console.log(res.data);
