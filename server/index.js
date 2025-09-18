@@ -35,6 +35,7 @@ app.post('/upload', (req, res) => {
                 return res.status(500).json("0");
             }
             // console.log("file Uploaded");
+            res.end();
             // res.send(`File uploaded ${samplefile.name}`);
             // res.json("1");
             update = "1";
