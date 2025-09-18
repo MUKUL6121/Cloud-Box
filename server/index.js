@@ -6,7 +6,7 @@ const fs = require('fs');
 const cors = require('cors');
 
 var corsoptions = {
-    origin: ['http://localhost:5173'],
+    origin: ['http://localhost:5173','https://cloud-box-zf9g.onrender.com'],
     // method: 'GET',
     optionsSuccessStatus: 200
 };
