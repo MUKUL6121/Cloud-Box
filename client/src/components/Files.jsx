@@ -9,7 +9,7 @@ function Files() {
         axios.get("https://cloud-box-server.onrender.com/files")
             .then((res) => {
                 setdata(res.data);
-                console.log(res.data);
+                // console.log(res.data);
             })
             .catch((err) => {
                 console.log(err);
