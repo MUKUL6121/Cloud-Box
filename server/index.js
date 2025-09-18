@@ -31,11 +31,10 @@ app.post('/upload', (req, res) => {
 
         samplefile.mv(uploadpath, (err) => {
             if (err) {
-                res.json("0");
-                return res.send(err);
+                return res.status(500).json("0");
             }
             // console.log("file Uploaded");
-            res.send(`File uploaded ${samplefile.name}`);
+            // res.send(`File uploaded ${samplefile.name}`);
             res.json("1");
         })
     }
