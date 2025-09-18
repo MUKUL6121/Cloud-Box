@@ -22,7 +22,8 @@ app.post('/upload', (req, res) => {
     let uploadpath;
 
     if (!req.files || Object.keys(req.files).length === 0) {
-        return res.status(400).send('No files were uploaded.');
+        // return res.status(400).send('No files were uploaded.');
+        update = "0";
     }
     // Use the mv() method to place the file somewhere on your server
     else {
@@ -35,8 +36,9 @@ app.post('/upload', (req, res) => {
             }
             // console.log("file Uploaded");
             // res.send(`File uploaded ${samplefile.name}`);
-            res.json("1");
-        })
+            // res.json("1");
+            update = "1";
+        });
     }
 });
 
