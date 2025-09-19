@@ -9,7 +9,7 @@ function Files() {
         axios.get("https://cloud-box-server.onrender.com/files")
             .then((res) => {
                 setdata(res.data);
-                // console.log(res.data);
+                console.log(res.data);
             })
             .catch((err) => {
                 console.log(err);
@@ -18,11 +18,13 @@ function Files() {
 
     return (
         <div>
-            {data.map((item, index) => {
-                return <ol >
-                    <li key={index} value={index+1}>{item}</li>
-                </ol>
-            })}
+            <ol >
+                {
+                    data.map((item, index) => {
+                        return <li key={index} value={index + 1}>{item}</li>
+                    })
+                }
+            </ol>
         </div >
     )
 }
